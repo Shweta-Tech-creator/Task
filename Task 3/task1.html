@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "nav content"
+        "footer footer";
+      grid-template-columns: 250px 1fr;
+      grid-template-rows: 80px 1fr 60px;
+      gap: 10px;
+      height: 100vh;
+    }
+
+    header {
+      grid-area: header;
+      background-color: #333;
+      color: white;
+      display: flex;
+      align-items: center;
+
+    }
+
+    nav {
+      grid-area: nav;
+      background-color: #555;
+      color: white;
+      padding: 20px;
+      position: fixed;
+      top: 80px;
+      bottom: 60px;
+      width: 250px;
+      overflow-y: auto;
+    }
+
+    main {
+      grid-area: content;
+      background-color: #f4f4f4;
+      padding: 20px;
+      margin-left: 260px;
+      overflow-y: auto;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      line-height: 60px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+ 
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-areas:
+          "header"
+          "content"
+          "footer";
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        display: none;
+      }
+
+      main {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <header>
+      <h1>My Portfolio</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>About Me</li>
+        <li>Projects</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <main>
+      <h2>Welcome</h2>
+      <section>
+      <p>Hello! I'm <strong>Shweta Kadam</strong>, a passionate and creative <strong>Frontend Developer</strong> with a knack for building visually appealing and user-friendly websites.</p>
+      <p>I specialize in HTML, CSS, and modern frontend frameworks. Whether it's crafting responsive layouts or adding interactivity with animations, I love turning ideas into polished digital experiences.</p>
+      <p>When I'm not coding, you'll find me exploring UI/UX trends, sketching design ideas, or learning new tech tools to stay sharp and inspired.</p>
+      <p><strong>Let's build something amazing together!</strong></p>
+    </section>
+    </main>
+    <footer>
+      &copy; 2025 My Portfolio
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flexbox Exercises</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f8ff;
+    }
+
+    h1 {
+      color: #2c3e50;
+      font-size: 1.5em;
+      margin-top: 40px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-around;
+      background-color: #3498db;
+      padding: 10px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .center-box-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      background: #ecf0f1;
+    }
+
+    .center-box {
+      width: 100px;
+      height: 100px;
+      background: #e74c3c;
+    }
+
+    .card-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .card {
+      flex: 1 1 250px;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+    }
+
+    .equal-columns {
+      display: flex;
+      align-items: stretch;
+      gap: 10px;
+    }
+
+    .equal-columns div {
+      flex: 1;
+      background: #dff9fb;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .layout {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .sidebar {
+      flex: 1;
+      min-width: 200px;
+      background: #f9ca24;
+      padding: 20px;
+    }
+
+    .main-content {
+      flex: 3;
+      background: #f6e58d;
+      padding: 20px;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .button-row button:last-child {
+      margin-left: auto;
+    }
+
+    .vertical-nav {
+      display: flex;
+      flex-direction: column;
+      background: #6ab04c;
+      padding: 10px;
+    }
+
+    .vertical-nav a {
+      color: white;
+      margin: 5px 0;
+      text-decoration: none;
+    }
+
+    .order-boxes {
+      display: flex;
+      gap: 10px;
+    }
+
+    .order-boxes div {
+      padding: 20px;
+      background: #95afc0;
+      color: white;
+    }
+
+    .order-boxes .second {
+      order: 1;
+    }
+
+    .order-boxes .first {
+      order: 2;
+    }
+
+    .grow-boxes {
+      display: flex;
+      gap: 10px;
+    }
+
+    .grow-boxes div {
+      flex-grow: 1;
+      background: #f0932b;
+      color: white;
+      padding: 20px;
+    }
+
+    .grow-boxes .grow-more {
+      flex-grow: 2;
+    }
+
+    .profile-layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .profile-layout img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+    }
+
+    .profile-layout .info {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+
+    <h1>Horizontal Navigation Bar</h1>
+    <nav class="navbar">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+
+
+    <h1>Center a Box</h1>
+    <div class="center-box-container">
+      <div class="center-box"></div>
+    </div>
+
+
+ 
+    <h1>Responsive Card Row</h1>
+    <div class="card-row">
+      <div class="card">Card 1</div>
+      <div class="card">Card 2</div>
+      <div class="card">Card 3</div>
+    </div>
+
+
+    <h1>Equal Height Columns</h1>
+    <div class="equal-columns">
+      <div>Column 1 with more text to test height</div>
+      <div>Column 2</div>
+      <div>Column 3</div>
+    </div>
+
+
+    <h1> Sidebar + Main Content</h1>
+    <div class="layout">
+      <div class="sidebar">Sidebar (25%)</div>
+      <div class="main-content">Main Content (75%)</div>
+    </div>
+
+
+    <h1> Button Row with Right Aligned Button</h1>
+    <div class="button-row">
+      <button>Button 1</button>
+      <button>Button 2</button>
+      <button>Button 3</button>
+      <button>Right Button</button>
+    </div>
+
+
+    <h1>Vertical Flexbox Navigation</h1>
+    <nav class="vertical-nav">
+      <a href="#">Dashboard</a>
+      <a href="#">Profile</a>
+      <a href="#">Settings</a>
+    </nav>
+
+
+    <h1> Flex Order Change</h1>
+    <div class="order-boxes">
+      <div class="first">First (Visually 2nd)</div>
+      <div class="second">Second (Visually 1st)</div>
+    </div>
+
+
+  
+    <h1> Grow One Box More Than Others</h1>
+    <div class="grow-boxes">
+      <div>Box 1</div>
+      <div class="grow-more">Box 2 (Grows More)</div>
+      <div>Box 3</div>
+    </div>
+
+
+    <h1>Profile Layout</h1>
+    <div class="profile-layout">
+      <img src="Task/Shweta-1.jpg" alt="Profile"/>
+      <div class="info">
+        <h3>Shweta Kadam</h3>
+        <p>Frontend Developer</p>
+      </div>
+    </div>
+
+
+</body>
+</html>

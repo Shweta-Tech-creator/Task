@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kadam News</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 2em;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "main main sidebar";
+      grid-template-columns: 2fr 2fr 1fr;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .main {
+      grid-area: main;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .article-title {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #1e3a8a;
+      margin-bottom: 10px;
+    }
+
+    .article-desc {
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .article {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-areas:
+          "main"
+          "sidebar";
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>Kadam News</header>
+
+  <div class="container">
+    <div class="main">
+      <div class="article-title">📰 Pahalgam Terror Attack: Militants Target Tourist Bus, Several Injured</div>
+      <div class="article-desc">
+        <p><strong>Pahalgam, Jammu & Kashmir – May 8, 2025:</strong></p>
+        <p>A terrorist attack struck the picturesque tourist town of Pahalgam on Sunday evening when militants opened fire on a bus carrying pilgrims. The vehicle, en route to a local shrine, lost control and fell into a gorge following the gunfire.</p>
+        <p>At least 9 people were injured, including women and children. Swift action from nearby security forces ensured immediate evacuation and transport of the injured to nearby hospitals. Two passengers are in critical condition.</p>
+        <p>The Jammu and Kashmir Police suspect the involvement of a newly active terror group in South Kashmir. A search operation is underway.</p>
+        <p>The Union Home Minister condemned the attack, assuring that the perpetrators will be brought to justice.</p>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="article">
+        <div class="article-title">India Launches New Space Mission to Study Sun</div>
+        <div class="article-desc">
+          ISRO successfully launched Aditya-L1 to study the solar corona. It will observe from the Lagrangian point, offering fresh insights into the Sun’s behavior.
+        </div>
+      </div>
+
+      <div class="article">
+        <div class="article-title">Stock Markets Rally as Inflation Drops</div>
+        <div class="article-desc">
+          Sensex and Nifty surged after economic indicators showed a decline in inflation, boosting investor confidence.
+        </div>
+      </div>
+
+      <div class="article">
+        <div class="article-title">Local Startup Wins Global AI Challenge</div>
+        <div class="article-desc">
+          A Pune-based startup won global recognition for an AI-based health diagnosis platform that outperformed competitors in accuracy.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

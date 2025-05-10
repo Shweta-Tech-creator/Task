@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Creative Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+    }
+
+    header {
+      background-color: #1e40af;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 2em;
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-areas:
+        "stats stats chart"
+        "calendar calendar notifications";
+      grid-template-columns: 2fr 2fr 1fr;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .widget {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .stats { grid-area: stats; }
+    .chart { grid-area: chart; }
+    .calendar { grid-area: calendar; }
+    .notifications { grid-area: notifications; }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    table.calendar {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    .calendar th, .calendar td {
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
+
+    .calendar th {
+      background-color: #1e3a8a;
+      color: white;
+    }
+
+    .calendar td:hover {
+      background-color: #f0f0f0;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .dashboard {
+        grid-template-areas:
+          "stats"
+          "chart"
+          "calendar"
+          "notifications";
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>My Creative Dashboard</header>
+
+<div class="dashboard">
+  <div class="widget stats">
+    <h2>📊 Statistics</h2>
+    <p>Revenue: ₹45,000</p>
+    <p>New Users: 230</p>
+    <p>Conversion Rate: 4.2%</p>
+  </div>
+
+  <div class="widget chart">
+    <h2>📈 Weekly Chart</h2>
+    <canvas id="myChart" width="400" height="200"></canvas>
+  </div>
+
+  <div class="widget calendar">
+    <h2>📅 May 2025</h2>
+    <table class="calendar">
+      <thead>
+        <tr>
+          <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th>
+          <th>Thu</th><th>Fri</th><th>Sat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td></tr>
+        <tr><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td></tr>
+        <tr><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
+        <tr><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="widget notifications">
+    <h2>🔔 Notifications</h2>
+    <ul>
+      <li>Meeting at 4 PM</li>
+      <li>Task due tomorrow</li>
+      <li>Update your profile</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  const ctx = document.getElementById('myChart');
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+      datasets: [{
+        label: 'Daily Revenue (₹)',
+        data: [4200, 3800, 5000, 4700, 5200, 6100, 5800],
+        borderColor: '#1e40af',
+        backgroundColor: 'rgba(30, 64, 175, 0.1)',
+        tension: 0.3,
+        fill: true,
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: false }
+      }
+    }
+  });
+</script>
+
+</body>
+</html>

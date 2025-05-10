@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Photo Gallery</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      padding: 20px;
+      background-color: #f8f8f8;
+    }
+
+    .gallery {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 1fr;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+
+    @media (min-width: 600px) and (max-width: 899px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+
+    @media (min-width: 900px) {
+      .gallery {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Responsive Photo Gallery</h1>
+
+  <div class="gallery">
+    <img src="https://i.pinimg.com/736x/7a/29/0f/7a290fe517c932552232cf134e9b4149.jpg" alt="Image 1" />
+    <img src="https://i.pinimg.com/736x/f8/f5/6d/f8f56d47f005e46f4e34b4cebae8588d.jpg" alt="Image 2" />
+    <img src="https://i.pinimg.com/736x/c4/40/e5/c440e5943f8753602a2f0c1df969ba3d.jpg" alt="Image 3" />
+    <img src="https://i.pinimg.com/736x/dd/e5/65/dde565a07c6d45173b0dce7df958a4ca.jpg" alt="Image 4" />
+    <img src="https://i.pinimg.com/736x/a9/35/a1/a935a123c7d5ec432d8cd6a7af5f0d36.jpg" alt="Image 5" />
+    <img src="https://i.pinimg.com/736x/70/f9/b0/70f9b02c1da7b285d65699b7ca9db8b6.jpg" alt="Image 6" />
+  </div>
+
+</body>
+</html>

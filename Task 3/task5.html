@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Dashboard</title>
+  <style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .dashboard {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "sidebar main";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 70px 1fr;
+    min-height: 100vh;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  header {
+    grid-area: header;
+    background-color: #6200ea;
+    color: #fff;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+    font-size: 1.1rem;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .sidebar h3 {
+    margin-bottom: 16px;
+    font-size: 1.2rem;
+    color: #444;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+  }
+  
+  .sidebar li {
+    margin-bottom: 12px;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: #6200ea;
+    font-weight: 500;
+  }
+  
+  .sidebar a:hover {
+    text-decoration: underline;
+  }
+  
+  .main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+      "weather news"
+      "calendar news";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .widget {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  }
+  
+  .widget h3 {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .widget p,
+  .widget ul {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  .widget ul {
+    padding-left: 20px;
+  }
+  
+  .weather {
+    grid-area: weather;
+  }
+  
+  .news {
+    grid-area: news;
+  }
+  
+  .calendar {
+    grid-area: calendar;
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard {
+      grid-template-areas:
+        "header"
+        "main"
+        "sidebar";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+  
+    .main {
+      grid-template-areas:
+        "weather"
+        "calendar"
+        "news";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+  }
+</style>  
+</head>
+<body>
+
+  <div class="dashboard">
+    <header>
+      <div><strong>Welcome, User</strong></div>
+      <div>🔔 ⚙️</div>
+    </header>
+
+    <aside class="sidebar">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <div class="widget weather">
+        <h3>🌤️ Weather</h3>
+        <p>25°C, Sunny</p>
+      </div>
+      <div class="widget news">
+        <h3>📰 News Feed</h3>
+      
+        <h4>Technology</h4>
+        <ul>
+          <li>OpenAI releases new model update</li>
+          <li>Google announces Pixel Fold 2</li>
+        </ul>
+      
+        <h4>Sports</h4>
+        <ul>
+          <li>India wins T20 series against Australia</li>
+          <li>Olympics 2024 countdown begins</li>
+        </ul>
+      
+        <h4>World</h4>
+        <ul>
+          <li>Global summit on climate change begins</li>
+          <li>Peace talks resume in the Middle East</li>
+        </ul>
+      </div>
+      
+      <div class="widget calendar">
+        <h3>📅 Calendar</h3>
+        <p>Upcoming: Meeting at 3 PM</p>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Grid Resume</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+
+    .resume {
+        display: grid;
+        grid-template-areas:
+          "left";
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 700px; 
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      
+    .left {
+      grid-area: left;
+      padding-right: 20px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    h2 {
+      margin-top: 20px;
+      color: #444;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .profile-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    .contact p {
+      margin: 5px 0;
+    }
+
+    .contact a {
+      color: #6200ea;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .resume {
+        grid-template-areas:
+          "header"
+          "left"
+          "right";
+        grid-template-columns: 3fr;
+      }
+
+      .left {
+        padding-right: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="resume">
+    <div class="left">
+      <img src="swetttta.jpeg" alt="Profile Picture" class="profile-pic" />
+      <h2>Shweta Kadam</h2>
+
+      <div class="section contact">
+        <p><b>Email:</b> kadamsweta92@gmail.com</p>
+        <p><b>Phone:</b> 8828321619</p>
+        <p><b>Location:</b> Thane, India</p>
+        <p><b>GitHub:</b> <a href="https://github.com/Shweta-Tech-creator" target="_blank">github.com/Shweta-Tech-creator</a></p>
+        <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/sweta-kadam-5851a4323/" target="_blank">linkedin.com/in/sweta-kadam-5851a4323</a></p>
+      </div>
+
+      <div class="section">
+        <h2>Skills</h2>
+        <ul>
+          <li><b>Programming Languages:</b> Python, HTML, CSS</li>
+          <li><b>Technologies & Tools:</b> AR/VR (Snapchat Filters), Generative AI</li>
+          <li><b>Development:</b> Web Development, UI/UX, AI-based Applications</li>
+          <li><b>Soft Skills:</b> Problem-solving, Teamwork, Adaptability</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Experience</h2>
+        <h3>Hackathons & Projects</h3>
+        <b>WeLearn Hackathon</b><br>
+        <p>Developed an AI-powered contract analysis tool to help businesses manage contracts by identifying key risks, deadlines, and compliance issues.</p>
+        <b>Atlas (Mumbai Hacks)</b><br>
+        <p>Created Medici, a website that suggests both generic and Ayurvedic medicines, recommends expert doctors, and integrates a chatbot for medical assistance.</p>
+      </div>
+
+      <div class="section">
+        <h2>Certifications</h2>
+        <ul>
+          <li><b>BharatXR AR/VR Certificate –</b> Specialized in Snapchat filter creation</li>
+          <li><b>Generative AI Certificate</b></li>
+          <li><b>Guinness World Record Holder –</b> Hacks</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Achievements</h2>
+        <ul>
+          <li>Guinness World Record for Mumbai Hacks</li>
+          <li>Successfully developed AI-based automation tools</li>
+          <li>Participated in multiple hackathons, showcasing problem-solving and technical skills</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Education</h2>
+        <p><b>B.Tech CSE</b> – ITM Skills University</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

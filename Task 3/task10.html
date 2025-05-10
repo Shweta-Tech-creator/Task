@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Social Media Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "profile feed sidebar";
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .profile, .feed, .sidebar {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .profile {
+      grid-area: profile;
+    }
+
+    .feed {
+      grid-area: feed;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+    }
+
+    .section-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #1e3a8a;
+    }
+
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-areas:
+          "profile"
+          "feed"
+          "sidebar";
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="profile">
+      <div class="section-title">Profile</div>
+      <p><strong>Name:</strong> Shweta Kadam</p>
+      <p><strong>Location:</strong> Thane</p>
+      <p><strong>Bio:</strong> Tech enthusiast, developer, and AI explorer.</p>
+    </div>
+
+    <div class="feed">
+      <div class="section-title">News Feed</div>
+      <p><strong>Shweta Kadam:</strong> Just finished building my social media layout with CSS Grid! 💻✨</p>
+      <p><strong>Friend:</strong> This layout is amazing, Shweta! Keep going! 🚀</p>
+    </div>
+
+    <div class="sidebar">
+      <div class="section-title">Sidebar</div>
+      <p>Friend Suggestions</p>
+      <ul>
+        <li>Aryan M.</li>
+        <li>Neha P.</li>
+        <li>Sachin T.</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

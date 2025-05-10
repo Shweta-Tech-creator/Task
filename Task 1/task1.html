@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Dev Handbook</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(white, rgb(173, 219, 249));
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    details {
+        background: white;
+        padding: 25px 20px;
+        max-width: 700px; /* Set max width */
+        width: 90%;        /* Responsive on smaller screens */
+        margin: 30px auto; /* Center it */
+        border-radius: 16px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        font-family: Arial, sans-serif;
+        cursor: pointer;
+      }
+      
+    summary {
+      font-weight: bold;
+      font-size: 1.1em;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::marker {
+      display: none;
+    }
+
+    summary::before {
+      content: '▶';
+      color: royalblue;
+      display: inline-block;
+      margin-right: 10px;
+      transition: transform 0.3s;
+    }
+
+    details[open] summary::before {
+      transform: rotate(90deg);
+    }
+
+    .compare-box {
+      display: flex;
+      gap: 5px;
+      margin-top: 10px;
+    }
+
+    .compare-box div {
+      flex: 1;
+      background: #f5faff;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    .compare-box h4 {
+      margin-top: 0;
+      color: royalblue;
+    }
+
+    .compare-box ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📗 Student Dev Handbook</h1>
+  </header>
+
+  <details>
+    <summary>🔷 What is HTML?</summary>
+    <p>HTML stands for HyperText Markup Language. It is used to structure web pages and their content.</p>
+  </details>
+
+  <details>
+    <summary>🔷 What is a Semantic Tag?</summary>
+    <p>Semantic tags define the meaning and purpose of the content they contain, rather than just how it should be presented.</p>
+  </details>
+
+  <details>
+    <summary>🔷 Difference between id and class</summary>
+    <div class="compare-box">
+      <div>
+        <h4>ID Attribute</h4>
+        <ul>
+          <li>Uniquely identifies one element.</li>
+          <li>Used for styling or JavaScript.</li>
+          <li>Only one element per ID.</li>
+          <li>Written as <code>id="example"</code>.</li>
+          <li>Used for unique elements.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Class Attribute</h4>
+        <ul>
+          <li>Can be applied to multiple elements.</li>
+          <li>Used for styling or JavaScript.</li>
+          <li>Many elements can share a class.</li>
+          <li>Written as <code>class="example"</code>.</li>
+          <li>Used for styling groups.</li>
+        </ul>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>🔷 What is a &lt; Summary &gt; element?</summary>
+    <p>The &lt; Summary &gt; tag defines a visible heading for the  &lt;details&gt; element. The heading can be clicked to view/hide the details.</p>
+  </details> 
+  <details>
+    <summary>🔷 What is CSS?</summary>
+    <p>CSS stands for Cascading Style Sheets.CSS describes how HTML elements are to be displayed on screen, paper, or in other media.CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.A CSS rule consists of a selector and a declaration block.
+
+    </p>
+  </details>
+</body>
+</html>
